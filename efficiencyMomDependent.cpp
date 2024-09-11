@@ -71,12 +71,12 @@ void efficiencyMomDependent(const char* inFileName = "AnalysisResults", const ch
   TH1F* pi_pos_IT_rebin= rebin(pi_pos_IT, "pi_pos_IT_rebin");
 
   TH1F *gE_glob_neg_rebin = new TH1F(*pi_neg_IT_rebin);
-  gE_glob_neg_rebin->Divide(pi_neg_IT_rebin, pi_neg_d_rebin, 1., 1., "B");   //B mi calcolal'errore binomiale
+  gE_glob_neg_rebin->Divide(pi_neg_IT_rebin, pi_neg_d_rebin, 1., 1., "B");
   gE_glob_neg_rebin->SetName("EffPiMinusGlo");
   gE_glob_neg_rebin->SetTitle(";#it{p}_{T} (GeV/#it{c});#epsilon_{glo}(#pi^{-})");
 
   TH1F *gE_glob_pos_rebin = new TH1F(*pi_pos_IT_rebin);
-  gE_glob_pos_rebin->Divide(pi_pos_IT_rebin, pi_pos_d_rebin, 1., 1., "B");   //B mi calcolal'errore binomiale
+  gE_glob_pos_rebin->Divide(pi_pos_IT_rebin, pi_pos_d_rebin, 1., 1., "B");
   gE_glob_pos_rebin->SetName("EffPiPlusGlo");
   gE_glob_pos_rebin->SetTitle(";#it{p}_{T} (GeV/#it{c});#epsilon_{glo}(#pi^{+})");
 
